@@ -1,0 +1,39 @@
+body {
+    background-color: antiquewhite;
+    color: darkseagreen;
+    font-family: Tahoma, sans-serif;
+}
+
+h1{
+    color: powderblue;
+    text-align: center;
+    font-size: 40px;
+}
+
+h2{
+    color: indianred;
+}
+
+section{
+    margin: 20px;
+    padding: 15px;
+}
+
+ul{
+    background-color: beige;
+    padding: 15px;
+}
+
+a{
+    color: darkolivegreen;
+}
+
+#Experience ul{
+    display: flex;
+    gap: 20px;
+}
+
+#Connect ul{
+    display: flex;
+    gap: 20px;
+}
