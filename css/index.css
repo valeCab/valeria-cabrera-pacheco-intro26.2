@@ -27,13 +27,35 @@ ul{
 a{
     color: darkolivegreen;
 }
-
-#Experience ul{
-    display: flex;
-    gap: 20px;
+#about {
+    text-align: center;
 }
 
-#Connect ul{
+#experience {
+    padding: 15px;
+}
+.job {
+    background-color: beige;
+    padding: 15px;
+    margin-bottom: 15px;
+    border-radius: 8px;
+}
+.job-header{
     display: flex;
-    gap: 20px;
+    justify-content: space-between;
+    align-items: center;
+}
+.job h3 {
+    margin: 0;
+}
+.job span {
+    font-weight: bold;
+}
+
+#connect a{
+    text-decoration: none;
+    background-color: darkseagreen;
+    color: white;
+    padding: 2px;
+    border-radius: 1px;
 }
