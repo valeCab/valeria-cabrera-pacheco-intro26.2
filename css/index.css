@@ -32,7 +32,6 @@ a{
 }
 
 #experience {
-    padding: 15px;
     display: flex;
     flex-direction: column;
     gap: 20px;
@@ -55,12 +54,6 @@ a{
     font-weight: bold;
 }
 
-#connect a{
-    text-decoration: none;
-    background-color: darkseagreen;
-    color: white;
-    padding: 2px;
-    border-radius: 1px;
 #connect ul{
     display: flex;
     gap: 15px;
@@ -77,6 +70,35 @@ a{
 }
 
 #skills li {
+    background-color: floralwhite;
     padding: 10px;
     border-radius: 8px;
+}
+
+#footer {
+    text-align: center;
+    padding: 20px;
+    margin-top: 30px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    max-width: 500px;
+}
+
+input {
+    padding: 10px;
+    border-radius: 5px;
+}
+
+textarea {
+    padding: 10px;
+    border-radius: 3px;
+}
+
+button {
+    width: 120px;
+    padding: 10px;
 }
