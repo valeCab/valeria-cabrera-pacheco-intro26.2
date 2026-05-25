@@ -1,0 +1,82 @@
+body {
+    background-color: antiquewhite;
+    color: darkseagreen;
+    font-family: Tahoma, sans-serif;
+}
+
+h1{
+    color: powderblue;
+    text-align: center;
+    font-size: 40px;
+}
+
+h2{
+    color: indianred;
+}
+
+section{
+    margin: 20px;
+    padding: 15px;
+}
+
+ul{
+    background-color: beige;
+    padding: 15px;
+}
+
+a{
+    color: darkolivegreen;
+}
+#about {
+    text-align: center;
+}
+
+#experience {
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+.job {
+    background-color: beige;
+    padding: 15px;
+    margin-bottom: 15px;
+    border-radius: 8px;
+}
+.job-header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.job h3 {
+    margin: 0;
+}
+.job span {
+    font-weight: bold;
+}
+
+#connect a{
+    text-decoration: none;
+    background-color: darkseagreen;
+    color: white;
+    padding: 2px;
+    border-radius: 1px;
+#connect ul{
+    display: flex;
+    gap: 15px;
+    list-style: none;
+    padding: 0;
+}
+
+#skills ul {
+    display: flex;
+    gap: 15px;
+    list-style: none;
+    padding: 0;
+    flex-wrap: wrap;
+}
+
+#skills li {
+    padding: 10px;
+    border-radius: 8px;
+}
