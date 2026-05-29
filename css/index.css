@@ -1,17 +1,17 @@
 body {
     background-color: antiquewhite;
-    color: darkseagreen;
+    color: darkslategray;
     font-family: Tahoma, sans-serif;
 }
 
 h1{
-    color: powderblue;
+    color: cadetblue;
     text-align: center;
     font-size: 40px;
 }
 
 h2{
-    color: indianred;
+    color: teal;
 }
 
 section{
@@ -25,7 +25,7 @@ ul{
 }
 
 a{
-    color: darkolivegreen;
+    color: teal;
 }
 #about {
     text-align: center;
@@ -75,7 +75,7 @@ a{
     border-radius: 8px;
 }
 
-#footer {
+footer {
     text-align: center;
     padding: 20px;
     margin-top: 30px;
@@ -101,4 +101,18 @@ textarea {
 button {
     width: 120px;
     padding: 10px;
+}
+
+#projects ul {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    list-style: none;
+    padding: 0;
+}
+
+#projects li {
+    background-color:floralwhite;
+    padding: 10px;
+    border-radius: 8px;
 }

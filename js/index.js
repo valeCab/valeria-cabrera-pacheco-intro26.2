@@ -7,7 +7,7 @@ copyright.innerHTML = `Valeria © ${thisYear}`;
 footer.appendChild(copyright); 
 
 //Skills
-const skills = ["JavaScript", "HTML", "CSS", "GitHub", "SQL"];
+const skills = ["JavaScript", "HTML", "CSS", "GitHub", "SQL", "R"];
 const skillsSection = document.getElementById("skills");
 const skillsList = skillsSection.querySelector("ul");
 for (let i = 0; i < skills.length; i++) {
@@ -44,7 +44,7 @@ messageForm.addEventListener("submit", function(event) {
 
   removeButton.addEventListener("click", function() {
     const entry = removeButton.parentNode;
-    entry.removeChild();
+    entry.remove();
   });
 
   newMessage.appendChild(removeButton);
@@ -52,3 +52,20 @@ messageForm.addEventListener("submit", function(event) {
   messageForm.reset();
     
 }); 
+
+fetch("https://api.github.com/users/valeCab/repos")
+  .then(response => response.json())
+  .then(repositories => {
+    console.log(repositories);
+    const projectSection = document.getElementById("projects");
+    const projectList = projectSection.querySelector("ul");
+
+    for (let i = 0; i < repositories.length; i++) {
+      let project = document.createElement("li");
+      project.innerText = repositories[i].name;
+      projectList.appendChild(project);
+    }
+  })
+  .catch(error => {
+    console.log("Error:", error);
+  });
