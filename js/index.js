@@ -53,6 +53,7 @@ messageForm.addEventListener("submit", function(event) {
     
 }); 
 
+//Repositories
 fetch("https://api.github.com/users/valeCab/repos")
   .then(response => response.json())
   .then(repositories => {
