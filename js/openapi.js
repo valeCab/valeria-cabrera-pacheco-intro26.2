@@ -23,10 +23,7 @@ imageBtn.addEventListener("click", function () {
 
 // Dog Info 
 dogBtn.addEventListener("click", function () {
-    fetch("https://api.thedogapi.com/v1/images/search?has_breeds=1", {
-    headers: {
-        "x-api-key": "live_n90m0DCnPIhkb2sDe7ZlcAVqTJBnoQ72kpRJLar0Oi3A1iKuwplO5ostjdJSWWGr"}
-    })
+    fetch("https://api.thedogapi.com/v1/images/search?has_breeds=1")
 
     .then(response => response.json())
     .then(data => {
