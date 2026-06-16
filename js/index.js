@@ -1,12 +1,13 @@
+// Create footer and display currenrt year
 const footer = document.createElement("footer");
 document.body.appendChild(footer);
 const today = new Date();
 const thisYear = today.getFullYear();
 const copyright = document.createElement("p");
-copyright.innerHTML = `Valeria © ${thisYear}`;
+copyright.innerHTML = `Valeria Cabrera © ${thisYear}`;
 footer.appendChild(copyright); 
 
-//Skills
+//Skills from skills array
 const skills = ["JavaScript", "HTML", "CSS", "GitHub", "SQL", "R"];
 const skillsSection = document.getElementById("skills");
 const skillsList = skillsSection.querySelector("ul");
@@ -36,7 +37,7 @@ messageForm.addEventListener("submit", function(event) {
     <a href="mailto:${usersEmail}">${usersName}</a>
     <span> ${usersMessage} </span>
   `;
-
+// Remove button 
   const removeButton = document.createElement("button");
 
   removeButton.innerText = "remove";
@@ -53,7 +54,7 @@ messageForm.addEventListener("submit", function(event) {
     
 }); 
 
-//Repositories
+//Fetch Git repositories 
 fetch("https://api.github.com/users/valeCab/repos")
   .then(response => response.json())
   .then(repositories => {
