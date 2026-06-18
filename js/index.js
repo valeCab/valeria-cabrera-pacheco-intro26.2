@@ -4,7 +4,7 @@ document.body.appendChild(footer);
 const today = new Date();
 const thisYear = today.getFullYear();
 const copyright = document.createElement("p");
-copyright.innerHTML = `Valeria Cabrera © ${thisYear}`;
+copyright.innerHTML = `&copy; ${thisYear} Valeria Cabrera`;
 footer.appendChild(copyright); 
 
 //Skills from skills array
@@ -64,7 +64,12 @@ fetch("https://api.github.com/users/valeCab/repos")
 
     for (let i = 0; i < repositories.length; i++) {
       let project = document.createElement("li");
-      project.innerText = repositories[i].name;
+      const projectLink = document.createElement("a");
+      projectLink.href = repositories[i].html_url;
+      projectLink.innerText = repositories[i].name;
+      projectLink.target = "_blank";
+
+      project.appendChild(projectLink);
       projectList.appendChild(project);
     }
   })

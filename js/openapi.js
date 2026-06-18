@@ -23,17 +23,19 @@ imageBtn.addEventListener("click", function () {
 
 // Dog Info 
 dogBtn.addEventListener("click", function () {
-    fetch("https://api.thedogapi.com/v1/images/search?has_breeds=1")
+    fetch("https://api.thedogapi.com/v1/images/breeds")
 
     .then(response => response.json())
     .then(data => {
-        console.log(data);
+        const randomBreed =
+        data[Math.floor(Math.random() * data.length)];
 // theres no breeds so I added the information available (id, width, height)
         output.innerHTML = `
         <h2>Dog Information</h2>
-        <p><strong>ID:</strong> ${data[0].id}</p>
-        <p><strong>Width:</strong> ${data[0].width}</p>
-        <p><strong>Height:</strong> ${data[0].height}</p>`;
+        <p><strong>Name:</strong> ${randomBreed.name}</p>
+        <p><strong>Temperament:</strong> ${randomBreed.temperament}</p>
+        <p><strong>Life Span:</strong> ${randomBreed.life_span}</p>
+        <p><strong>Weight:</strong> ${randomBreed.weight.metric} kg</p>`;
     })
     
     .catch(error => {
